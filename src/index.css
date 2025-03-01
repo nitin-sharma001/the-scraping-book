@@ -11,3 +11,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul{text-decoration: none;}
+ul li{list-style-type: none;}
+
+.main-bdr{ border-color: #FFFFFF1F !important;}
+.bdr-white-8{border: 1px solid; border-color: #FFFFFF14 !important;}
+.bdr-radius-9{border-radius: 9px !important;}
+
+.bg-dark-blue{background-color: #101322 !important;}
+.bg-light-blue{background-color: #4F6FE84A !important;}
+.bg-blue-main{background-color: #101528 !important;}
+.bg-white-12{background-color: #FFFFFF12 !important;}
+.bg-white-15{background-color: #FFFFFF26 !important;}
+.bg-white-26{background-color: #FFFBFF26 !important;}
+.bg-white-5{background-color: #FFFFFF0D !important;}
+.bg-white-8{background-color: #FFFFFF14 !important;}
+.bg-cream{background-color: #00E98E !important;}
+.bg-gray{background-color: #7C98FF !important;}
+.bg-white-7{background: #FFFBFF26 !important;}
+.bg-white-faded{
+  background: #FFFFFF08 !important;
+}
+
+.text-gray{color: #7C98FF !important;}
+.text-gray-2{color: #ACADB2 !important;}
+.text-white-65{color: #FFFFFFA6;}
+.text-white-55{color: #FFFFFF8C;}
+.text-white-45{color: #FFFFFF73 !important;}
+.text-white-8{color: #FFFFFF70 !important;}
+.text-green{color: #00E98E !important;}
+.text-red{color: #FF577B !important;}
+.text-active{color: #00E98E !important;}
+.text-danger1{
+  color: #ff3366;
+}
+.fs-7{font-size: 6.03px !important;}
+.fs-10{font-size: 10.03px !important;}
+.fs-11{font-size: 11px !important;}
+.fs-12{font-size: 12px !important;}
+.fs-13{font-size: 13.5px !important;}
+.fs-14{font-size: 14px !important;}
+.fs-16{font-size: 16.71px !important;}
+.fs-18{font-size: 18px !important;}
+.fs-20{font-size: 20px !important;}
+.fs-22{font-size: 22px !important;}
+.fs-24{font-size: 24px !important;}
+.fs-25{font-size: 25px !important;}
+.fs-26{font-size: 26px !important;}
+.fs-30{font-size: 30px !important;}
+.fs-33{font-size: 33px !important;}
+
+.fw-500{font-weight: 500 !important;}
+.fw-600{font-weight: 600 !important;}
+
+.lh-29{line-height: 29px !important;}
+
+
+
+.w-84{width: 84% !important;}
+.w-64{width: 64% !important;}
+.w-30{
+  width: 30% !important;
+}
+
+.m--15{    margin-left: -15px !important; }
+.m--17{    margin-right: -17px;}

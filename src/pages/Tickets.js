@@ -129,46 +129,46 @@ const Tickets = () => {
 
                 {/* Dropdown Menu */}
                 <Dropdown.Menu className="border-0 p-1 rounded-3 dropdown-menu">
-                                  <span className=" px-3 fw-500 fs-14">Select Filters</span>
-                                  <Dropdown.Item
-                                    onClick={() => setSelectedFilter("A-Z")}
-                                    className="d-flex justify-content-between text-white dropdown-item"
-                                  >
-                                    A-Z{" "}
-                                    <input
-                                      type="radio"
-                                      onClick={(e) => {
-                                        e.stopPropagation(); // Prevents Dropdown.Item from handling this click
-                                        setSelectedFilter("A-Z");
-                                      }}
-                                      checked={selectedFilter === "A-Z"}
-                                      readOnly
-                                    />
-                                  </Dropdown.Item>
-                
-                                  <Dropdown.Item
-                                    onClick={() => setSelectedFilter("Z-A")}
-                                    className="d-flex justify-content-between text-white dropdown-item"
-                                  >
-                                    Z-A{" "}
-                                    <input
-                                      type="radio"
-                                      onClick={(e) => {
-                                        e.stopPropagation(); // Prevents Dropdown.Item from handling this click
-                                        setSelectedFilter("Z-A");
-                                      }}
-                                      checked={selectedFilter === "Z-A"}
-                                      readOnly
-                                    />
-                                  </Dropdown.Item>
-                                </Dropdown.Menu>
+                  <span className=" px-3 fw-500 fs-14">Select Filters</span>
+                  <Dropdown.Item
+                    onClick={() => setSelectedFilter("A-Z")}
+                    className="d-flex justify-content-between text-white dropdown-item"
+                  >
+                    A-Z{" "}
+                    <input
+                      type="radio"
+                      onClick={(e) => {
+                        e.stopPropagation(); // Prevents Dropdown.Item from handling this click
+                        setSelectedFilter("A-Z");
+                      }}
+                      checked={selectedFilter === "A-Z"}
+                      readOnly
+                    />
+                  </Dropdown.Item>
+
+                  <Dropdown.Item
+                    onClick={() => setSelectedFilter("Z-A")}
+                    className="d-flex justify-content-between text-white dropdown-item"
+                  >
+                    Z-A{" "}
+                    <input
+                      type="radio"
+                      onClick={(e) => {
+                        e.stopPropagation(); // Prevents Dropdown.Item from handling this click
+                        setSelectedFilter("Z-A");
+                      }}
+                      checked={selectedFilter === "Z-A"}
+                      readOnly
+                    />
+                  </Dropdown.Item>
+                </Dropdown.Menu>
               </Dropdown>
             </div>
           </Col>
         </Row>
       </div>
 
-      <div className="container mt-3 px-4">
+      <div className=" mt-3 px-4">
         <div className="table-responsive">
           <table id="customTable" className="table custom-table">
             <thead className="rounded-3">
@@ -209,7 +209,7 @@ const Tickets = () => {
                       variant=""
                       size="sm"
                       className="float-end m--17 fs-15 text-gray fw-500"
-                      onClick={() => navigate("/monitor/sneaker/edit/123")}
+                      onClick={() => navigate("/monitor/tickets/edit/123")}
                     >
                       <FiEdit2 className="fs-18" />
                     </Button>

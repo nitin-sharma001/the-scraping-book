@@ -2,10 +2,29 @@ import { PiXLogo } from "react-icons/pi";
 import Button from "react-bootstrap/Button";
 import { CiSettings } from "react-icons/ci";
 import { FiMonitor, FiSettings } from "react-icons/fi";
+
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
+
 import Header from "../components/Header";
 import { AiOutlinePlus } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
+import { useState } from "react";
 const General = () => {
+  const [color, setColor] = useState("#00E98E"); // Default color
+
+  // Function to handle color change
+  const handleColorChange = (event) => {
+    setColor(event.target.value);
+  };
+
+  const linkHandler = () => {
+      window.open(
+        "https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks",
+        "_blank"
+      );
+  }
+
   return (
     <div className="bg-blue-main w-100">
       <Header />
@@ -65,14 +84,27 @@ const General = () => {
                   Hexa Decimal
                 </label>
                 <div className="d-flex align-items-center form-input-field rounded">
-                  <span className="text-gray ps-2 fw-bold ">#</span>
+                  <span className="text-gray ps-2 fw-bold">#</span>
                   <input
                     type="text"
-                    className="form-control fw-500  bg-transparent border-0 rounded-3 text-white form-input-field"
-                    defaultValue="00E98E"
+                    className="form-control fw-500 bg-transparent border-0 rounded-3 text-white form-input-field"
+                    value={color.replace("#", "")} // Show HEX code without #
+                    readOnly
                   />
-                  <div className="border-start border-secondary color-picker py-1 px-2">
-                    <div className=" bg-cream px-2 pt-4 rounded-1 "></div>
+                  <div className="border-start border-secondary color-picker px-1 pt-1">
+                    <input
+                      type="color"
+                      className="color-input border border-0 bdr-radius-9"
+                      value={color}
+                      onChange={handleColorChange}
+                      style={{
+                        width: "65px",
+                        height: "30px",
+                        border: "none",
+                        background: "transparent",
+                        cursor: "pointer",
+                      }}
+                    />
                   </div>
                 </div>
               </div>
@@ -91,7 +123,11 @@ const General = () => {
               <div className="mb-3">
                 <label className="fw-500 form-label fs-13 text-white d-flex justify-content-between">
                   Domain{" "}
-                  <a href="#" className="text-gray fs-12 fw-500 small">
+                  <a
+                    onClick={linkHandler}
+                    href="#"
+                    className="text-gray fs-12 fw-500 small"
+                  >
                     How it works?
                   </a>
                 </label>

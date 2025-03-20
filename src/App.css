@@ -116,10 +116,10 @@
 .form-control {
   color: #788499 !important;
 }
-.color-picker {
+/* .color-picker {
   width: 75px !important;
   height: 33px !important;
-}
+} */
 input:focus {
   outline: none !important;
 }
@@ -353,8 +353,8 @@ input:focus {
 .slider > .range {
   position: absolute;
   z-index: 2;
-  left: 24% !important;
-  right: 23% !important;
+  /* left: 24% !important; */
+  /* right: 23% !important; */
   top: 0;
   bottom: 0;
   border-radius: 5px;
@@ -372,11 +372,11 @@ input:focus {
   transition: box-shadow 0.3s ease-in-out;
 }
 .slider > .thumb.left {
-  left: 24% !important;
+  /* left: 24% !important; */
   transform: translate(-15px, -10px);
 }
 .slider > .thumb.right {
-  right: 25% !important;
+  /* right: 25% !important; */
   transform: translate(15px, -10px);
 }
 .slider > .thumb.hover {
@@ -476,3 +476,13 @@ input[type="radio" i] {
 
 }
 
+.tooltip-inner {
+  background-color: #101322 !important; /* Change to desired color */
+  color: #7C98FF !important; /* Text color */
+  font-weight: 500 !important;
+  border-radius: 10px !important;
+}
+
+.bs-tooltip-top .arrow::before {
+  border-top-color: #00E98E !important; /* Change arrow color */
+}

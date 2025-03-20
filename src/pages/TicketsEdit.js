@@ -28,7 +28,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import Search from "../assets/search.svg";
 import { AiOutlineInfo, AiOutlinePlus } from "react-icons/ai";
-const SneakerEdit = () => {
+const TicketsEdit = () => {
   const [selectedFilter, setSelectedFilter] = useState("A-Z");
 
   const [show, setShow] = useState(false);
@@ -36,8 +36,8 @@ const SneakerEdit = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [leftValue, setLeftValue] = useState(38);
-  const [rightValue, setRightValue] = useState(50);
+  const [leftValue, setLeftValue] = useState(65);
+  const [rightValue, setRightValue] = useState(85);
 
   useEffect(() => {
     updateSlider();
@@ -83,7 +83,7 @@ const SneakerEdit = () => {
               <FiMonitor className="fs-26 text-gray" />
               <h4 className="fs-22 text-white mb-1">Monitor Settings</h4>
               <IoIosArrowForward className="fs-14 text-white-65" />
-              <h5 className="fs-20 text-white-65 mb-1">Sneaker</h5>
+              <h5 className="fs-20 text-white-65 mb-1">Tickets</h5>
               <IoIosArrowForward className="fs-14 text-white-65" />
               <h5 className="fs-20 text-white-65 mb-1">Edit</h5>
             </div>
@@ -323,7 +323,7 @@ const SneakerEdit = () => {
                 <tr>
                   <th className="fs-13 fw-500">Name</th>
                   <th className="fs-13 fw-500">Status</th>
-                  <th className="fs-13 fw-500">Size Range</th>
+                  <th className="fs-13 fw-500">Price Range</th>
                   <th className="fs-13 fw-500">Actions</th>
                 </tr>
               </thead>
@@ -338,11 +338,11 @@ const SneakerEdit = () => {
                         className="d-flex align-items-center text-white fs-14 fw-500 gap-2 text-decoration-none"
                       >
                         <FaExternalLinkAlt className="text-gray fs-16" />{" "}
-                        https://www.nike.com/at/launch/t/air-jordan-1-high-85-schuh-sNwjs7
+                        https://www.ticketmaster.de/event/pitbull-party-after-dark-tickets/433448237
                       </a>
                     </td>
                     <td className="text-active fs-14 fw-500">● Active</td>
-                    <td className="fs-14 fw-500 text-white">36-50</td>
+                    <td className="fs-14 fw-500 text-white">$36 - $50</td>
                     <td className="">
                       <div className="fs-18 d-flex fw-500 align-items-center gap-2">
                         <FiEdit2
@@ -383,7 +383,7 @@ const SneakerEdit = () => {
                 Link/Product ID
               </Form.Label>
               <Button className="fs-14 bg-none modal-text-btn bdr-radius-9 bg-white-8">
-                https://www.nike.com/at/launch/t/air-jordan-1-high-85-schuh-sNwjS7
+                https://www.ticketmaster.de/event/pitbull-party-after-dark-ticket..
               </Button>
             </Form.Group>
 
@@ -408,7 +408,7 @@ const SneakerEdit = () => {
             </Form.Group>
             <Form.Group md="4" controlId="validationCustom01" className="py-2">
               <div className="d-flex justify-content-between  pt-2">
-                <h5 className=" text-white fs-18 fw-600">Size Range</h5>
+                <h5 className=" text-white fs-18 fw-600">Price Range</h5>
 
                 <div>
                   <span
@@ -430,8 +430,8 @@ const SneakerEdit = () => {
               <div className="multi-range-slider mb-4 pt-3">
                 <input
                   type="range"
-                  min="36"
-                  max="50"
+                  min="0"
+                  max="100"
                   value={leftValue}
                   onChange={handleLeftChange}
                 />
@@ -448,35 +448,29 @@ const SneakerEdit = () => {
                   <div
                     className="range"
                     style={{
-                      left: `${(leftValue / 100) * 100 - 20}%`,
-                      right: `${100 - (rightValue / 100) * 100 - 50}%`,
+                      left: `${(leftValue / 100) * 100}%`,
+                      right: `${100 - (rightValue / 100) * 100}%`,
                     }}
                   ></div>
                   <div
                     className="thumb left"
-                    style={{ left: `${(leftValue / 100) * 100 - 20}%` }}
+                    style={{ left: `${(leftValue / 100) * 100}%` }}
                   ></div>
                   <div
                     className="thumb right"
-                    style={{ right: `${100 - (rightValue / 100) * 100 - 50}%` }}
+                    style={{ right: `${100 - (rightValue / 100) * 100}%` }}
                   ></div>
                 </div>
                 <div className="position-relative me-4 d-flex justify-content-around pt-3">
                   <span
                     className="position-absolute text-muted1"
-                    style={{ left: `3.5%` }}
-                  >
-                    36
-                  </span>
-                  <span
-                    className="position-absolute text-muted1"
-                    style={{ left: `${(leftValue / 100) * 100 - 20}%` }}
+                    style={{ left: `${(leftValue / 100) * 100}%` }}
                   >
                     {leftValue}
                   </span>
                   <span
                     className="position-absolute text-muted1"
-                    style={{ right: `${100 - (rightValue / 100) * 100 - 55}%` }}
+                    style={{ right: `${100 - (rightValue / 100) * 100 - 5}%` }}
                   >
                     {rightValue}
                   </span>
@@ -499,4 +493,4 @@ const SneakerEdit = () => {
   );
 };
 
-export default SneakerEdit;
+export default TicketsEdit;

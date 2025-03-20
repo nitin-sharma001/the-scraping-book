@@ -168,7 +168,7 @@ const AlternativeResell = () => {
         </Row>
       </div>
 
-      <div className="container mt-3 px-4">
+      <div className=" mt-3 px-4">
         <div className="table-responsive">
           <table id="customTable" className="table custom-table">
             <thead className="rounded-3">
@@ -209,7 +209,9 @@ const AlternativeResell = () => {
                       variant=""
                       size="sm"
                       className="float-end m--17 fs-15 text-gray fw-500"
-                      onClick={() => navigate("/monitor/sneaker/edit/123")}
+                      onClick={() =>
+                        navigate("/alternative-resell/sneaker/edit/123")
+                      }
                     >
                       <FiEdit2 className="fs-18" />
                     </Button>

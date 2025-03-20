@@ -168,7 +168,7 @@ const [selectedFilter, setSelectedFilter] = useState("A-Z");
         </Row>
       </div>
 
-      <div className="container mt-3 px-4">
+      <div className=" mt-3 px-4">
         <div className="table-responsive">
           <table
             id="customTable"
